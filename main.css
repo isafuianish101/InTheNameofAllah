@@ -1,0 +1,146 @@
+* {
+  box-sizing: border-box;
+  padding: 0%;
+  margin: 0%;
+  text-decoration: none;
+  text-decoration: none;
+}
+
+:root {
+  --main-bg-color: #111;
+  --top-bg-color: #FF4444;
+  --top-bg-border-color: #CC0000;
+  --top-text-color: #000;
+  --surah-bg-color: #777;
+  --surah-text-bg-color: #222;
+  --surah-text-color: #EEE;
+  --surah-text-focus-color: #FF4444;
+  --surah-toggle-color: #EEE;
+  --surah-toggle-bg-color: #222;
+  --surah-toggle-focus-color: #FF4444;
+  --surah-toggle-hide-color: #777;
+}
+
+body{
+  background: var(--main-bg-color);
+  font-family: Verdana, sans-serif;
+}
+
+.wrapper{
+  position: relative;
+  clear:both;
+
+  width: 100%;
+  overflow: hidden;
+}
+.top{
+  background: var(--top-bg-color);
+  border-top: 1em solid var(--top-bg-border-color);
+}
+ 
+.top .title {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 2.5em;
+  padding-bottom: 4em;
+  color: var(--top-text-color);
+}
+ 
+.content{
+  padding-bottom: 20px;
+}
+
+.surah{
+  position: relative;
+  background: var(--surah-bg-color);
+  padding:50px;
+  width: 80%;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 2px 4px rgba(100,100,100,.1);
+  border-radius: 1.5em;
+}
+
+.content .surah.first {
+  margin-top: -2em;
+}
+
+.surah .header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.surah .header .toggles {
+  margin-left: auto;
+}
+
+.surah .header .toggles a {
+  min-width: 5em;
+  padding: .25em .75em;
+  border-radius: 1.5em;
+  background-color: var(--surah-toggle-bg-color);
+  cursor: pointer;
+  color: var(--surah-toggle-color);
+  margin-right: .5em;
+}
+
+.surah .header .toggles a.focus {
+  color: var(--surah-toggle-focus-color);
+}
+.surah .header .toggles a.hide {
+  color: var(--surah-toggle-hide-color);
+} 
+
+.surah .surah-title {
+  font-size:2em;
+  font-weight:700;
+ }
+
+ .surah .surah-ayah {
+  margin-bottom: 1em;
+  background-color: var(--surah-text-bg-color);
+  padding: 1em;
+  border-radius: 1em;
+}
+
+.surah .surah-ayah .surah-text-arabic{
+  color: var(--surah-text-color);
+  padding: .25em;
+  padding-bottom: .5em;
+  text-align: right;
+}
+.surah .surah-ayah .surah-text-phonetic{
+  text-transform: uppercase;
+  color: var(--surah-text-color);
+  padding: .25em;
+} 
+.surah .surah-ayah .surah-text-english{
+  text-transform: uppercase;
+  color: var(--surah-text-color);
+  padding: .25em;
+}
+
+.surah .surah-ayah .surah-text-arabic.focus {
+  color: var(--surah-text-focus-color);
+  font-size:1.5em;
+}
+
+.surah .surah-ayah .surah-text-phonetic.focus {
+  color: var(--surah-text-focus-color);
+  font-size:1.5em;
+} 
+
+.surah .surah-ayah .surah-text-english.focus {
+  color: var(--surah-text-focus-color);
+  /* margin-top: .75em; */
+  margin-bottom: 0;
+  font-size:1.5em;
+} 
+
+.surah .surah-ayah .surah-text-arabic.hide,
+.surah .surah-ayah .surah-text-phonetic.hide,
+.surah .surah-ayah .surah-text-english.hide{
+  display: none;
+} 
+
+
